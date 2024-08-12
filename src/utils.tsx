@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getConversionMap } from './effects';
-import delay from "delay"
-
-export interface CartItem {
-  name : string;
-  cost : number;
-}
-
+import { CartItem } from './etc/get-items-total';
 export function useItems(
   rootCurrency = Currency.USD,
   targetCurrency = Currency.GBP
@@ -36,15 +30,6 @@ export function useItems(
     })()
   },[])
   return items
-}
-
-export function getItemsTotal(items : CartItem[]) : number {
-  const prices = items.map(i => i.cost)
-  let total = 0
-  for (const price of prices) {
-    total += price
-  }
-  return parseFloat(total.toFixed(2))
 }
 
 
