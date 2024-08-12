@@ -1,5 +1,7 @@
 import './App.css'
-import { CartItem, useItems, getItemsTotal } from './utils'
+import { getItemsTotal, CartItem } from './etc/get-items-total'
+import { useItems } from './utils'
+// import { CartItem, useItems, getItemsTotal } from './utils'
 
 function App() {
   const shoppingCartItems : CartItem[] = useItems()

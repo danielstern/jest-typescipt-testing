@@ -1,4 +1,5 @@
-import delay from "delay"
+const delay = async (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+console.info("Loaded real map")
 export const getConversionMap = async () => {
   await delay(500)
 
