@@ -12,6 +12,9 @@ export function getItemsTotal(items : CartItem[]) : number {
     if (typeof price !== "number") {
       throw new Error("Non number in list")
     }
+    if (price < 0) {
+      throw new Error("Invalid value")
+    }
     total += price
   }
   return parseFloat(total.toFixed(2))
