@@ -1,6 +1,8 @@
 import './App.css'
+import { CartItemsDisplay } from './components/CartItemsDisplay'
 import { getItemsTotal, CartItem } from './etc/get-items-total'
 import { useItems } from './utils'
+import React from "react"
 // import { CartItem, useItems, getItemsTotal } from './utils'
 
 function App() {
@@ -16,12 +18,8 @@ function App() {
        <h1>
         Your Shopping Cart
        </h1>
-       {shoppingCartItems.map((item, i) => (
-        <div key={i}> 
-          {item.name} - {item.cost}
-          
-        </div>
-       ))}
+       <CartItemsDisplay shoppingCartItems={shoppingCartItems}/>
+      
        <h2>
         Your Total: ${total}
        </h2>

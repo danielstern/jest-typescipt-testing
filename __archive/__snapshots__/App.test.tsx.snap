@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The cart list component Should match the snapshot 1`] = `
+<div>
+  <div>
+    item 1
+     - 
+    100
+  </div>
+  <div>
+    item 2
+     - 
+    200
+  </div>
+  <div>
+    item 3
+     - 
+    300
+  </div>
+</div>
+`;
